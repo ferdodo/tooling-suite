@@ -1,0 +1,39 @@
+{
+  "formatter": {
+    "enabled": false
+  },
+  "linter": {
+    "enabled": true,
+    "rules": {
+      "nursery": {
+        "useExplicitType": "error"
+      },
+      "suspicious": {
+        "noExplicitAny": "error"
+      },
+      "correctness": {
+        "noUnusedVariables": "error"
+      },
+      "style": {
+        "noRestrictedImports": {
+          "level": "error",
+          "options": {
+            "paths": {
+              "vitest": {
+                "importNames": ["beforeEach", "afterEach", "vi"],
+                "message": "Do not import beforeEach, afterEach, or vi directly from 'vitest'. Each test must stay isolated instead of relying on shared setup or teardown. For mocking, prefer dedicated test doubles (e.g. a createXxxMock() factory) instead of vi."
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "assist": {
+    "actions": {
+      "source": {
+        "organizeImports": "off"
+      }
+    }
+  }
+}
