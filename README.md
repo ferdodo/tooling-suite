@@ -32,8 +32,8 @@ Commands run in the order given and stop at the first failure.
 
 # Publishing
 
-  docker compose build --no-cache publish
-  docker compose run publish bash ./scripts/publish.sh
+    docker compose build --no-cache publish
+    docker compose run publish bash ./scripts/publish.sh
 
 ## Notes
 
