@@ -6,6 +6,7 @@ import { createRequire } from 'module';
 import { fileURLToPath } from 'url';
 import { dirname, resolve } from 'path';
 import { noIgnoreComments } from './noIgnoreComments.mjs';
+import { noThrow } from './noThrow.mjs';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const toolingRoot = resolve(__dirname, '..');
@@ -60,6 +61,7 @@ Commands:
   test               Run tests with vitest
   mutation           Run mutation testing with stryker
   no-ignore-comments Check for biome-ignore and ts-ignore comments
+  no-throw           Check for throw statements
 `);
 }
 
@@ -91,6 +93,9 @@ for (const command of commands) {
       break;
     case 'no-ignore-comments':
       status = await noIgnoreComments();
+      break;
+    case 'no-throw':
+      status = await noThrow();
       break;
     default:
       console.error(`Unknown command: ${command}`);

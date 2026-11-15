@@ -1,6 +1,6 @@
 {
   "name": "tooling-suite",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Suite of code-quality tools (biome, exportcase, tsc, vitest, stryker, ignore-comment check) bundled behind a single CLI",
   "type": "module",
   "main": "./index.mjs",

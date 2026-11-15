@@ -10,6 +10,7 @@ A suite of code-quality tools bundled behind a single CLI:
 | `test`               | `vitest run --passWithNoTests`                         |
 | `mutation`           | Stryker, with the bundled `stryker.config.json`        |
 | `no-ignore-comments` | Fails if `biome-ignore` / `ts-ignore` comments exist    |
+| `no-throw`           | Fails if `throw` statements exist                      |
 
 ## Usage
 
@@ -32,6 +33,7 @@ Commands run in the order given and stop at the first failure.
 
 # Publishing
 
+    docker pull node
     docker compose build --no-cache publish
     docker compose run publish bash ./scripts/publish.sh
 
